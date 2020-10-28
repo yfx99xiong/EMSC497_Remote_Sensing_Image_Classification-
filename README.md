@@ -13,21 +13,3 @@ Use training.csv to train different classifiers you have learned above, evaluate
 Use k-fold cross validation method to tune the hyperparameter ‘k’ for the k nearest neighbor classifier, use GridSearchCV to tune the hyperparameters of ‘max_depth’ and ‘min_sample_leaf’ for the decision tree method, plot the classification measure (you choose a proper metric, such as kappa coefficient) varied with different hyperparameters for both training set and test set.
 Use your trained model and best hyperparameter to classify the whole image (data.tif), which means that you need to assign a class label to each pixel. Plot the original image and the classification results of different classifiers.
 Apply principal component analysis to X (the surface reflectance values of the 63 bands). Choose a subset of the principal components to perform classification tasks (kNN, decision tree, naïve bayes, SVM), plot the classification results, and discuss the advantages/disadvantages of using principal components to do image classification.
-Tips:
-
-Consider to write a function to print out different performance metrics given test data.
-Use following codes as reference to read the image data and apply the classifier to the image
-# import package
-import skimage.io as io
- 
-# read image as a numpy array
-img_ds = io.imread("your image data path")
-img = np.array(img_ds, dtype='uint16')  
- 
-# unroll the image
-new_shape = (img.shape[0] * img.shape[1], img.shape[2]) 
-img_as_array = img[:, :, :].reshape(new_shape)
- 
- 
-# predict the class
-class_pred = yourmodel.predict (img_as_array)
