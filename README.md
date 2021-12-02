@@ -1,7 +1,6 @@
-# EMSC497_Remote_Sensing_Image_Classification-
-This is a course lab for EMSC497 Environmental Data Analysis 
+# Remote_Sensing_Image_Classification-
 
-For practice, you will perform image classification on a hyperspectral image, and assign a class label (land cover) to each pixel.
+Perform image classification on a hyperspectral image, and assign a class label (land cover) to each pixel.
 
 The image file (“data.tif”) is a hyperspectral airborne image acquired on November 17, 2008 by AISA-Eagle (AE) Hyperspectral Imager of CALMIT (Center for Advanced Land Management Information Technologies), University of Nebraska-Lincoln. The image covers part of the coast near Corpus Christi, Texas. It includes 63 narrow bands in the Visible and Near Infrared (VNIR) spectral range from 400 to 970 nm wavelength at a spatial resolution of 1 and 2 meters. The pixel value of each band is the surface reflectance multiplied by 10000.
 
@@ -13,3 +12,5 @@ Use training.csv to train different classifiers you have learned above, evaluate
 Use k-fold cross validation method to tune the hyperparameter ‘k’ for the k nearest neighbor classifier, use GridSearchCV to tune the hyperparameters of ‘max_depth’ and ‘min_sample_leaf’ for the decision tree method, plot the classification measure (you choose a proper metric, such as kappa coefficient) varied with different hyperparameters for both training set and test set.
 Use your trained model and best hyperparameter to classify the whole image (data.tif), which means that you need to assign a class label to each pixel. Plot the original image and the classification results of different classifiers.
 Apply principal component analysis to X (the surface reflectance values of the 63 bands). Choose a subset of the principal components to perform classification tasks (kNN, decision tree, naïve bayes, SVM), plot the classification results, and discuss the advantages/disadvantages of using principal components to do image classification.
+
+Note: This is a course lab for EMSC497 Environmental Data Analysis 
